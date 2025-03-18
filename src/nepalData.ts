@@ -1,5 +1,5 @@
 
-import  districtsData from '../data/nepal-districts.geojson' ;  
+import districtsData from '../data/nepal-districts.geojson';
 import { DistrictData, DistrictFeature, NepalDataManager } from './types';
 
 class NepalDataManagerImpl implements NepalDataManager {
