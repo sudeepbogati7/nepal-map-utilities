@@ -1,0 +1,54 @@
+{
+  "name": "map-of-nepal",
+  "version": "1.0.0",
+  "description": "A Leaflet.js-based npm package for rendering maps of Nepal with GeoJSON boundaries",
+  "keywords": [
+    "leaflet",
+    "maps",
+    "nepal",
+    "geojson",
+    "openstreetmap"
+  ],
+  "author": "Sudeep Bogati",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "prepublishOnly": "npm run build",
+    "type-check": "tsc --noEmit",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/leaflet": "^1.9.16",
+    "rollup": "^4.36.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudeepbogati7/nepal-map-utilities.git"
+  },
+  "dependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "tslib": "^2.8.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Modern JavaScript target for browsers
+    "module": "esnext", // ES Modules for Rollup bundling
+    "declaration": true, // Generate .d.ts files for TypeScript users
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Source directory
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Better module interoperability
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "moduleResolution": "node", // Node.js-style module resolution
+    "sourceMap": true, // Generate source maps for debugging
+    "noImplicitAny": true, // Disallow implicit any types
+    "noUnusedLocals": true, // Catch unused variables
+    "noUnusedParameters": true, // Catch unused parameters
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "src/**/*",
+    "data/**/*"
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules
+    "dist" // Exclude output directory
+  ]
+}
