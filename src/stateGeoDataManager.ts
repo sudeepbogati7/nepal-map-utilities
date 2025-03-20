@@ -1,6 +1,5 @@
 import statesData from '../data/nepal-states.geojson';
 import { StateData, StateFeature, StateGeoDataManager as stateGeoDataManager } from './types';
-
 const stateNameMap: { [key: string]: string } = {
     '1': 'Province No. 1',
     '2': 'Province No. 2',
@@ -34,13 +33,10 @@ class StateGeoDataManager implements StateGeoDataManager {
     filterStates(predicate: (feature: StateFeature) => boolean): StateFeature[] {
         return this.data.features.filter(predicate);
     }
-
-    // Add a method to get the friendly name
     getFriendlyStateName(feature: StateFeature): string {
         return stateNameMap[feature.properties.ADM1_EN] || feature.properties.ADM1_EN;
     }
 }
 
 const stateGeoDataManager = new StateGeoDataManager();
-
 export default stateGeoDataManager;
