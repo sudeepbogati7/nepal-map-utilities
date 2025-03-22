@@ -2,7 +2,7 @@ import L, { Map, GeoJSON } from 'leaflet';
 import { mapProviders } from './mapProviders';
 
 
-export class GeoBoundaryMap {
+export class GeoDataNepal {
   private map: Map;
   private geoJsonLayer: GeoJSON | null = null;
 

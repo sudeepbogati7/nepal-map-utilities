@@ -1,4 +1,4 @@
-export { GeoBoundaryMap } from './geoBoundary';
+export { GeoDataNepal } from './geoBoundary';
 export { mapProviders, type MapProvider } from './mapProviders';
-export { default as nepalDataManager } from './nepalData';
+export { default as geoDataManager } from './nepalData';
 export * from './types';

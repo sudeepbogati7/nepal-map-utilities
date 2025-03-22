@@ -2,7 +2,7 @@
 import districtsData from '../data/nepal-districts.geojson';
 import { DistrictData, DistrictFeature, NepalDataManager } from './types';
 
-class NepalDataManagerImpl implements NepalDataManager {
+class GeoDataManager implements NepalDataManager {
   private data: DistrictData;
 
   constructor() {
@@ -22,6 +22,6 @@ class NepalDataManagerImpl implements NepalDataManager {
   }
 }
 
-const nepalDataManager = new NepalDataManagerImpl();
+const geoDataManager = new GeoDataManager();
 
 export default nepalDataManager;
