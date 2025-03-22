@@ -1,16 +1,15 @@
-
 import districtsData from '../data/nepal-districts.geojson';
-import { DistrictData, DistrictFeature, DistrictGeoDataManager } from './types';
+import { DistrictData, DistrictFeature, DistrictGeoDataManager as IDistrictGeoDataManager } from './types';
 
-class GeoDataManager implements DistrictGeoDataManager {
+class DistrictGeoDataManager implements IDistrictGeoDataManager {
   private data: DistrictData;
 
   constructor() {
-    this.data = districtsData as DistrictData; // Type assertion since JSON is loaded
+    this.data = districtsData as DistrictData;
   }
 
   getAllDistricts(): DistrictData {
-    return { ...this.data }; // Return a copy to prevent mutation
+    return { ...this.data };
   }
 
   getDistrictByName(name: string): DistrictFeature | undefined {
@@ -22,6 +21,6 @@ class GeoDataManager implements DistrictGeoDataManager {
   }
 }
 
-const geoDataManager = new GeoDataManager();
+const districtGeoDataManager = new DistrictGeoDataManager();
 
-export default geoDataManager;
+export default districtGeoDataManager;

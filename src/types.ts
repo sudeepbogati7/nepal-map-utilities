@@ -1,3 +1,4 @@
+// District Types (unchanged)
 export interface DistrictFeature extends GeoJSON.Feature {
   id: number;
   properties: {
@@ -12,26 +13,35 @@ export interface DistrictData extends GeoJSON.FeatureCollection {
 
 // State (Province) Types
 export interface StateFeature extends GeoJSON.Feature {
-  id: number;
   properties: {
-    STATE: string; 
+    Shape_Leng: number;
+    Shape_Area: number;
+    ADM1_EN: string; // State name or identifier (e.g., "1" for Province No. 1)
+    ADM1_PCODE: string;
+    ADM1_REF: string | null;
+    ADM1ALT1EN: string | null;
+    ADM1ALT2EN: string | null;
+    ADM0_EN: string;
+    ADM0_PCODE: string;
+    date: string;
+    validOn: string;
+    validTo: string | null;
   };
-  geometry: GeoJSON.Polygon | GeoJSON.MultiPolygon;
+  geometry: GeoJSON.MultiPolygon; // Based on the snippet, geometry is MultiPolygon
 }
 
 export interface StateData extends GeoJSON.FeatureCollection {
   features: StateFeature[];
 }
 
-// Headquarters Types
+// Headquarters Types (unchanged for now)
 export interface HeadquartersFeature extends GeoJSON.Feature {
   id: number;
   properties: {
-    NAME: string; // Adjust based on your GeoJSON data (e.g., name of the headquarters)
-    TYPE: string; // E.g., "District HQ", "State HQ"
-    // Add other properties as needed
+    NAME: string;
+    TYPE: string;
   };
-  geometry: GeoJSON.Point; // Headquarters are typically points
+  geometry: GeoJSON.Point;
 }
 
 export interface HeadquartersData extends GeoJSON.FeatureCollection {
