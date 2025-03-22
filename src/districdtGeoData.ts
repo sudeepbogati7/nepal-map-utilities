@@ -24,4 +24,4 @@ class GeoDataManager implements NepalDataManager {
 
 const geoDataManager = new GeoDataManager();
 
-export default nepalDataManager;
+export default geoDataManager;
