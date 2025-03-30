@@ -42,6 +42,11 @@ export class GeoDataNepal {
     return this;
   }
 
+
+  getGeoJsonLayer(): GeoJSON | null {
+
+    return this.geoJsonLayer;
+  }
   getMap(): Map {
     return this.map;
   }
