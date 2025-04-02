@@ -3,6 +3,9 @@ interface MapProviderConfig {
   attribution: string;
 }
 
+
+
+// list of the free map providers 
 export const mapProviders: { [key: string]: MapProviderConfig } = {
   osm: {
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
