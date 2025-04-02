@@ -1,4 +1,3 @@
-// District Types (unchanged)
 export interface DistrictFeature extends GeoJSON.Feature {
   id: number;
   properties: {
@@ -10,8 +9,6 @@ export interface DistrictFeature extends GeoJSON.Feature {
 export interface DistrictData extends GeoJSON.FeatureCollection {
   features: DistrictFeature[];
 }
-
-// State (Province) Types
 export interface StateFeature extends GeoJSON.Feature {
   properties: {
     Shape_Leng: number;
@@ -34,7 +31,6 @@ export interface StateData extends GeoJSON.FeatureCollection {
   features: StateFeature[];
 }
 
-// Headquarters Types (unchanged for now)
 export interface HeadquartersFeature extends GeoJSON.Feature {
   id: number;
   properties: {
