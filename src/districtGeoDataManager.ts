@@ -23,6 +23,9 @@ class DistrictGeoDataManager implements IDistrictGeoDataManager {
 
 const districtGeoDataManager = new DistrictGeoDataManager();
 
+// Exporting the instance for use in other modules
+export { DistrictGeoDataManager };
+
 export default districtGeoDataManager;
 
 
